@@ -1,13 +1,13 @@
 <template>
-	<div id="app" data-theme="light">
-		<Header/>
+    <div id="app" data-theme="light">
+        <Header/>
 
-		<div class="container grid-lg">
-			<Rss/>
-		</div>
+        <div class="container grid-lg">
+            <Rss/>
+        </div>
 
-		<Footer/>
-	</div>
+        <Footer/>
+    </div>
 </template>
 
 <script>
@@ -16,12 +16,12 @@ import Rss from './components/Rss.vue';
 import Footer from './components/Footer.vue';
 
 export default {
-	name: 'app',
-	components: {
-		Header,
-		Rss,
-		Footer
-	},
+    name: 'app',
+    components: {
+        Header,
+        Rss,
+        Footer
+    },
 }
 </script>
 
@@ -47,15 +47,15 @@ export default {
 }
 
 #app {
-	font-family: 'Avenir', Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: var(--font-color);
-	background-color: var(--bg-color);
-	min-height: 100vh;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    min-height: 100vh;
 }
 
 a {
-	color: var(--primary-color);
+    color: var(--primary-color);
 }
 </style>
