@@ -1,78 +1,78 @@
 <template>
-	<header class="header">
-		<nav class="container grid-lg nav-header">
-			<a href="https://github.com/AsterYujano/light-rss">
-				<img class="logo" alt="logo" src=".././assets/vue-rss.png">
-			</a>
-			<h4 class="title">Light-rss</h4>
+  <header class="header">
+    <nav class="container grid-lg nav-header">
+      <a href="https://github.com/AsterYujano/light-rss">
+        <img class="logo" alt="logo" src=".././assets/vue-rss.png">
+      </a>
+      <h4 class="title">Light-rss</h4>
 
-			<label class="switch" v-on:click="toggle">
-				<input type="checkbox">
-				<span class="slider round"></span>
-			</label>
-		</nav>
-	</header>
+      <label class="switch" v-on:click="toggle">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </nav>
+  </header>
 </template>
 
 <script>
 export default {
-	name: 'Header',
-	data() {
-		return {
+  name: 'Header',
+  data() {
+    return {
 
-		}
-	},
-	mounted: function() {
-		const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-		const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+    }
+  },
+  mounted: function() {
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+    const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
 
-		if (currentTheme) {
-		    document.documentElement.setAttribute('data-theme', currentTheme);
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
 
-		    if (currentTheme === 'dark') {
-		        toggleSwitch.checked = true;
-		    }
-		}
-	},
-	methods: {
-		toggle: function(e) {
-			if (e.target.checked) {
-		        document.documentElement.setAttribute('data-theme', 'dark');
-		        localStorage.setItem('theme', 'dark');
-		    }
-		    else {
-		        document.documentElement.setAttribute('data-theme', 'light');
-		        localStorage.setItem('theme', 'light');
-		    }
-		}
-	}
+        if (currentTheme === 'dark') {
+            toggleSwitch.checked = true;
+        }
+    }
+  },
+  methods: {
+    toggle: function(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+      else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      }
+    }
+  }
 }
 </script>
 
 <style scoped>
 .header {
-	height: 45px;
-	background-color: var(--secondary-bg-color);
-	margin-bottom: 15px;
-	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.13);
+  height: 45px;
+  background-color: var(--secondary-bg-color);
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.13);
 }
 
 .nav-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .logo {
-	width: 30px;
-	height: 30px;
-	margin-right: 15px;
-	margin-top: 7px;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  margin-top: 7px;
 }
 
 
